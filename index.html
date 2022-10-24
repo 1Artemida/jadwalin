@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jadwalin</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./Vector.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="jadwalin-header">
+      <img src="./shared/Menu.png" alt="Menu" class="jadwalin-image-menu" />
+
+      <div class="jadwalin-header-image">
+        <img src="./shared/Group.png" alt="Logo" class="jadwalin-logo" />
+        <img src="./shared/Jadwalin.png" alt="Name" />
+      </div>
+
+      <button class="jadwalin-button-join" onclick="changeText(this)">
+        Join now
+      </button>
+    </header>
+
+    <main>
+      <article>
+        <section class="jadwalin-banner">
+          <h1 class="jadwalin-banner-title">Plans & Pricing</h1>
+          <div class="jadwalin-banner-elements">
+            <h2 class="jadwalin-banner-subtitle__text">
+              Whether your time-saving automation needs are large or small,
+              we’re here to help you scale.
+            </h2>
+
+            <div class="jadwalin-toggle">
+              <input type="checkbox" id="switch" />
+              <label
+                month-show="true"
+                onclick="changePlansAndPricing(this)"
+                for="switch"
+              ></label>
+              <div class="yearly">yearly</div>
+              <div class="monthly selected">monthly</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="jadwalin-container">
+          <div class="jadwalin-container-card">
+            <div>
+              <div class="jadwalin-container-card-price">
+                <span class="jadwalin-card-price__value" id="starter">$19</span>
+                <span class="jadwalin-card-price__label">/month</span>
+              </div>
+              <div class="jadwalin-card-title">Starter</div>
+              <div class="jadwalin-card-subtitle">
+                Unleash the power of automation.
+              </div>
+              <ul class="jadwalin-card-list">
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-1.png"
+                  />
+                  Multi-step Zaps
+                </li>
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-1.png"
+                  />
+                  3 Premium Apps
+                </li>
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-1.png"
+                  />2 Users team
+                </li>
+              </ul>
+            </div>
+
+            <button class="button-primary">Choose plan</button>
+          </div>
+
+          <div class="jadwalin-container-card">
+            <div>
+              <div class="jadwalin-container-card-price">
+                <span class="jadwalin-card-price__value" id="professional"
+                  >$54</span
+                >
+                <span class="jadwalin-card-price__label">/month</span>
+              </div>
+              <div class="jadwalin-card-title">Professional</div>
+              <div class="jadwalin-card-subtitle">
+                Advanced tools to take your work to the next level.
+              </div>
+              <ul class="jadwalin-card-list">
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-1.png"
+                  />Multi-step Zaps
+                </li>
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-1.png"
+                  />Ultimited Premium
+                </li>
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-1.png"
+                  />50 Users team
+                </li>
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-1.png"
+                  />Shared Workspace
+                </li>
+              </ul>
+            </div>
+
+            <button class="button-primary">Choose plan</button>
+          </div>
+
+          <div class="jadwalin-container-card jadwalin-container-card--purple">
+            <div class="jadwalin-container-card-info">
+              <span class="jadwalin-popular-price">most popular</span>
+              <div class="jadwalin-card-price">
+                <span
+                  class="jadwalin-card-price__value jadwalin-card-price__value--white"
+                  id="company"
+                  >$89</span
+                >
+                <span
+                  class="jadwalin-card-price__label jadwalin-card-price__label--white"
+                  >/month</span
+                >
+              </div>
+              <div class="jadwalin-card-title jadwalin-card-title--white">
+                Company
+              </div>
+              <div class="jadwalin-card-subtitle jadwalin-card-subtitle--white">
+                Automation plus enterprise grade features.
+              </div>
+              <ul class="jadwalin-card-list jadwalin-card-list--white">
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-dark.png"
+                  />Multi-step Zaps
+                </li>
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-dark.png"
+                  />Ultimited Premium
+                </li>
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-dark.png"
+                  />Ultimated Users Team
+                </li>
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-dark.png"
+                  />Advanced Admin
+                </li>
+                <li>
+                  <img
+                    class="jadwalin-card-list-marker"
+                    src="shared/check-circle-dark.png"
+                  />Custom Data Retention
+                </li>
+              </ul>
+            </div>
+
+            <button class="button-primary button-primary--pink">
+              Choose plan
+            </button>
+          </div>
+        </section>
+      </article>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

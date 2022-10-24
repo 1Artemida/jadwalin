@@ -1,0 +1,391 @@
+:root {
+  /* color constants */
+  --navy-blue: #231d4f;
+  --light: #f5f5fa;
+  --white: #ffffff;
+  --beige: #f2dad5;
+  --light-blue: #a1abd6;
+  --light-pink: #bb6bd9;
+  --gray: #848199;
+  --purple: #403879;
+  --dark-purple: #3b3472;
+  --dark-pink: #a847cc;
+
+  /* Skittle font names (resource:https://ru.wikipedia.org/wiki/%D0%9A%D0%B5%D0%B3%D0%BB%D1%8C)*/
+  --frame: 10px;
+  --pica: 12px;
+  --mittel-third: 15px;
+  --parangon: 18px;
+  --small-canon: 30px;
+  --great-primer: 35px;
+  --major-canon: 40px;
+}
+
+/*default buttons */
+.button-primary {
+  width: 205px;
+  height: 45px;
+  background: var(--navy-blue);
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: var(--mittel-third);
+  line-height: 20px;
+  color: var(--white);
+}
+
+.button-primary:hover,
+.button-primary--pink:hover {
+  background: var(--dark-pink);
+}
+
+.button-primary--pink {
+  background: var(--light-pink);
+}
+
+html,
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    var(--light) 0%,
+    var(--beige) 44.15%,
+    var(--light-blue) 100%
+  );
+  font-family: "Poppins";
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jadwalin-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.jadwalin-image-menu {
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.jadwalin-header-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.jadwalin-logo {
+  margin-right: 10px;
+}
+
+.jadwalin-button-join {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 30px;
+  gap: 10px;
+  margin-right: 50px;
+  border-radius: 25px;
+  background: var(--light-pink);
+  border: none;
+  width: 124px;
+  height: 40px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: var(--mittel-third);
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.jadwalin-banner {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.jadwalin-banner-title {
+  color: var(--navy-blue);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--major-canon);
+  line-height: 60px;
+  margin: 0;
+}
+
+.jadwalin-banner-elements {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jadwalin-banner-subtitle__text {
+  color: var(--gray);
+  font-weight: 500;
+  font-size: var(--parangon);
+  line-height: 30px;
+  margin-right: 90px;
+}
+
+.jadwalin-toggle {
+  display: flex;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 220px;
+  height: 45px;
+  background: var(--white) 50%;
+  display: block;
+  border-radius: 20px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 110px;
+  height: 45px;
+  background: var(--light-pink);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--white) 50%;
+}
+
+input:checked + label:after {
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+.monthly,
+.yearly {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: var(--pica);
+  line-height: 20px;
+  letter-spacing: 0.833333px;
+  transition: 0.3s;
+  color: var(--dark-purple);
+}
+
+.yearly {
+  left: unset;
+  right: 35px;
+}
+
+.monthly.selected,
+.yearly.selected {
+  color: var(--white);
+}
+
+.jadwalin-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 90px;
+  margin-bottom: 60px;
+  background: rgba(255, 255, 255, 0.64);
+  border-radius: 25px;
+  min-height: 470px;
+}
+
+.jadwalin-container-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0px 40px 70px;
+}
+
+.jadwalin-card-price__value {
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--great-primer);
+  line-height: 45px;
+  color: var(--navy-blue);
+}
+
+.jadwalin-card-price__label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--parangon);
+  line-height: 25px;
+  color: var(--gray);
+}
+
+.jadwalin-card-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--small-canon);
+  line-height: 40px;
+  color: var(--navy-blue);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.jadwalin-card-subtitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--mittel-third);
+  line-height: 20px;
+  color: var(--gray);
+}
+
+.jadwalin-card-list {
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--mittel-third);
+  line-height: 20px;
+  padding-left: 25px;
+  color: var(--gray);
+  list-style-type: none;
+  padding: 0;
+}
+
+.jadwalin-card-list-marker {
+  margin-right: 10px;
+}
+
+.jadwalin-card-list li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.jadwalin-container-card--purple {
+  background: var(--navy-blue);
+  box-shadow: 0px 42px 34px rgb(82 67 194 / 30%);
+  border-radius: 25px;
+  justify-content: space-around;
+  padding: 20px 30px;
+  margin-top: -25px;
+  margin-left: 35px;
+  margin-right: 45px;
+  align-items: center;
+  width: 230px;
+  max-height: 430px;
+}
+
+.jadwalin-popular-price {
+  background: var(--purple);
+  border-radius: 15px;
+  width: 120px;
+  height: 25px;
+  text-transform: uppercase;
+  font-style: normal;
+  display: flex;
+  font-weight: 800;
+  font-size: var(--frame);
+  align-items: center;
+  line-height: 15px;
+  letter-spacing: 0.833333px;
+  color: var(--light-pink);
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px 0px 15px 110px;
+}
+
+.jadwalin-card-price__value--white,
+.jadwalin-card-price__label--white,
+.jadwalin-card-title--white,
+.jadwalin-card-subtitle--white {
+  color: var(--white);
+}
+
+.jadwalin-card-list--white {
+  color: var(--white);
+  list-style: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .button-primary {
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  .jadwalin-image-menu {
+    margin-left: 25px;
+  }
+
+  .jadwalin-header-image {
+    margin-right: 25px;
+  }
+
+  .jadwalin-button-join {
+    display: none;
+  }
+
+  .jadwalin-banner-elements {
+    flex-direction: column;
+  }
+
+  .jadwalin-banner-title {
+    margin: 0 12px;
+  }
+
+  .jadwalin-banner-subtitle__text {
+    margin: 0 15px 35px 15px;
+  }
+
+  .jadwalin-container {
+    flex-direction: column;
+    margin-top: 35px;
+    max-width: 285px;
+    margin-bottom: 60px;
+  }
+
+  .jadwalin-container-card {
+    padding: 30px;
+  }
+
+  .jadwalin-container-card-info {
+    margin: 0px 20px 0 20px;
+  }
+
+  .jadwalin-container-card--purple {
+    padding: 0;
+    margin: 10px;
+    width: 265px;
+    align-items: center;
+    min-height: 475px;
+  }
+
+  .jadwalin-popular-price {
+    margin: 15px 0 15px 55px;
+  }
+}
